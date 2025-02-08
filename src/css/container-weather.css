@@ -1,0 +1,71 @@
+.container-weather-infos-temp {
+    padding: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.container-weather-infos-temp #title {
+    font-size: 1.7rem;
+    font-weight: bold;
+
+    color: var(--color-00);
+
+    padding-bottom: 15px;
+}
+
+.container-weather-infos-temp .container-infos-temp {
+    width: calc(100% - 60px);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-evenly;
+
+    background: linear-gradient(var(--color-gradient-3), var(--color-gradient-4));
+
+    border-radius: 8px;
+}
+
+.container-weather-infos-temp .container-infos-temp .infos-temp-degree {
+    width: 150px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: start;
+    justify-content: center;
+
+    gap: 6px;
+}
+
+.container-weather-infos-temp .container-infos-temp .infos-temp-degree #degree-value {
+    font-size: 2.3rem;
+    font-weight: bold;
+
+    line-height: 30px;
+
+    color: var(--color-01);
+}
+
+.container-weather-infos-temp .container-infos-temp .infos-temp-degree #degree-description {
+    font-size: 1rem;
+    font-weight: normal;
+
+    color: var(--color-01);
+}
+
+/* Container Hidden/Show */
+
+.show {
+    display: flex;
+}
+
+.hidden {
+    display: none;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Aplicativo de Clima JS</title>
+
+    <!-- Export Link Font Awesome -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+    <!-- Export Link CSS -->
+
+    <link rel="stylesheet" href="src/css/style.css" />
+
+    <!-- Export Link Script JavaScritp -->
+
+    <script type="module" src="src/js/index.js" defer></script>
+</head>
+<body>
+
+    <main>
+        <section class="container-search">
+            <form id="form-weather">
+                <label for="sea rch-city-weather">
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <input
+                        type="search"
+                        name="search-city-weather"
+                        id="input-search-weather"
+                        placeholder="Buscar clima por cidade."
+                        required
+                    />
+                </label>
+
+                <button type="submit" id="button-submit-search-weather">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+        </section>
+
+        <section class="container-weather hidden">
+            <article class="container-weather-infos-temp">
+                <h1 id="title"></h1>
+
+                <section class="container-infos-temp">
+                    <div class="container-img-temp">
+                        <img id="img-weather">
+                    </div>
+
+                    <div class="infos-temp-degree">
+                        <p id="degree-value"></p>
+
+                        <p id="degree-description"></p>
+                    </div>
+                </section>
+            </article>
+
+            <section class="container-weather-other-infos-temp">
+                <ul class="list-other-infos-temp">
+                    <li class="other-info-temp">
+                        <i id="temperature-max" class="fa-solid fa-temperature-high"></i>
+
+                        <div class="info">
+                            <h2>Temp. Max.</h2>
+
+                            <p id="temp-max"></p>
+                        </div>
+                    </li>
+
+                    <li class="other-info-temp">
+                        <i id="temperature-min" class="fa-solid fa-temperature-quarter"></i>
+
+                        <div class="info">
+                            <h2>Temp. Min.</h2>
+
+                            <p id="temp-min"></p>
+                        </div>
+                    </li>
+
+                    <li class="other-info-temp">
+                        <i id="humidity" class="fa-solid fa-droplet"></i>
+
+                        <div class="info">
+                            <h2>Humidade.</h2>
+
+                            <p id="temp-humidity"></p>
+                        </div>
+                    </li>
+
+                    <li class="other-info-temp">
+                        <i id="wind" class="fa-solid fa-wind"></i>
+
+                        <div class="info">
+                            <h2>Vento.</h2>
+
+                            <p id="temp-wind"></p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </section>
+    </main>
+
+</body>
+</html>

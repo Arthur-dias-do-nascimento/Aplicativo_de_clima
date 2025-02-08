@@ -1,0 +1,19 @@
+/* Import Font CSS */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* Import Style CSS geral */
+
+@import url("reset.css");
+@import url("table-colors.css");
+
+/* Import Style CSS */
+
+@import url("body.css");
+@import url("main.css");
+
+/* Import Style CSS - Elements Especific Main */
+
+@import url("container-search.css");
+@import url("container-weather.css");
+@import url("container-other-weather.css");

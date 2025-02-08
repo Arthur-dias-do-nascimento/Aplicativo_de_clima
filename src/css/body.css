@@ -1,0 +1,9 @@
+body {
+    background: linear-gradient(var(--color-gradient-1), var(--color-gradient-2));
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 100vh;
+}
