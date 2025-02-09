@@ -30,7 +30,9 @@ const API_ENDPOINT = `https://api.openweathermap.org/data/2.5/weather`;
 
 async function FetchWeather(name_city) {
     try {
-        const response = await fetch(`${API_ENDPOINT}?q=${name_city}&appid=${API_KEY}&units=metric&lang=pt_br`);
+        const response = await fetch(
+            `${API_ENDPOINT}?q=${name_city}&appid=${API_KEY}&units=metric&lang=pt_br`
+        );
 
         if (!response.ok) {
             throw new Error(`Error is Fetch, cod: ${response.status}`);
@@ -52,10 +54,10 @@ async function FetchWeather(name_city) {
             humidity: data.main.humidity,
         };
 
-        console.log(weather)
-
         DisplayWeaher(weather);
     } catch (Error) {
+        alert("Coloque um nome de uma cidade valído");
+
         console.error(Error);
     }
 }
@@ -67,17 +69,17 @@ function DisplayWeaher(object) {
 
     title_city_weather.textContent = `${object.city}, ${object.country}`;
 
-    degree_value.innerHTML = object.temp.toFixed(1).toString().replace('.', ',') + "<sup>°C</sup>";
+    degree_value.innerHTML = object.temp.toFixed(1).toString().replace(".", ",") + "<sup>°C</sup>";
     degree_description.textContent = object.description;
 
-    img_weather.setAttribute("src", `http://openweathermap.org/img/wn/${object.tempIcon}@2x.png`)
+    img_weather.setAttribute("src", `http://openweathermap.org/img/wn/${object.tempIcon}@2x.png`);
 
-    temp_max.innerHTML = object.tempMax.toFixed(1).toString().replace('.', ',')  + "<sup>°C</sup>";
-    temp_min.innerHTML = object.tempMin.toFixed(1).toString().replace('.', ',')  + "<sup>°C</sup>";
+    temp_max.innerHTML = object.tempMax.toFixed(1).toString().replace(".", ",") + "<sup>°C</sup>";
+    temp_min.innerHTML = object.tempMin.toFixed(1).toString().replace(".", ",") + "<sup>°C</sup>";
 
     humidity.textContent = object.humidity + "%";
 
-    wind.textContent = object.windSpeed + "km/h"
+    wind.textContent = object.windSpeed + "km/h";
 }
 
 /* AddEventListener */
