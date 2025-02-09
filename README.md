@@ -4,9 +4,10 @@
 ## Linguagens Utilzadas
 
 <ul>
-    <li>HTMl</li>
+    <li>HTML</li>
     <li>CSS</li>
     <li>JavaScript</li>
 </ul>
 
 ## Link
+https://arthur-dias-do-nascimento.github.io/Aplicativo_de_clima/.
